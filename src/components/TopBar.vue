@@ -2,10 +2,29 @@
 defineProps({
   name: String,
 });
+
+</script>
+
+<script>
+export default {
+  data() {
+    return {
+      screenWidth: window.innerWidth
+    }
+  }
+}
 </script>
 
 <template>
   <img class="top left" src="../assets/avatar.png" alt="Pfp">
+  <p class="top center" v-if="screenWidth > 600">
+    <a href="#about">👋 About Me</a>
+    <a href="#stack">📚 My Stack</a>
+    <a href="#work">🖌️ Side Projects</a>
+  </p>
+  <p class="top center" v-else>
+    <a>Hello World</a>
+  </p>
   <h2 class="top right">{{ name }}</h2>
 </template>
 
@@ -22,6 +41,14 @@ defineProps({
 }
 .top.right { right: 1em; }
 .top.left { left: 1em; }
+
+.top.center {
+  top: 1.7em;
+  left: 7em;
+  right: 7em;
+  text-align: center;
+}
+.top.center a { padding: 1em; text-decoration: none; }
 
 img { height: 3em; }
 </style>

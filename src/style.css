@@ -7,5 +7,5 @@ div.center {
   grid-template-columns: 1fr;
 }
 div.center div.container {
-  margin: 1em;
+  margin: 3em;
 }

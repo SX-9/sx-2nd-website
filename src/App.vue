@@ -38,6 +38,7 @@ setTimeout(updateText, 1700);
 * {
   font-family: 'Encode Sans', sans-serif;
   color: #6bb0c6;
+  scroll-behavior: smooth;
 }
 body { background: #022530; }
 h1, h2, h3, h4, h5, h6, p { margin: 0; }
