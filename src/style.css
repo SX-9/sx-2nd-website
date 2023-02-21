@@ -1,0 +1,11 @@
+div.center {
+  margin: 0;
+  padding: 0;
+  height: 90vh;
+  display: grid;
+  place-items: center;
+  grid-template-columns: 1fr;
+}
+div.center div.container {
+  margin: 1em;
+}
