@@ -10,8 +10,8 @@ export default {
 </script>
 
 <template>
-  <div class="center">
-    <div id="about" class="container">
+  <div id="about" class="center">
+    <div class="container">
       <h1>About Me</h1>
       <p class="desktop" v-if="screenWidth > 600">{{ description }}</p>
       <p v-else>{{ description }}</p>

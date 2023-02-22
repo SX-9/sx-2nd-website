@@ -2,11 +2,13 @@
 import AboutMe from "./components/AboutMe.vue";
 import TopBar from "./components/TopBar.vue";
 import Background from "./components/Background.vue";
+import MyStack from './components/MyStack.vue';
 export default {
   components: {
     TopBar,
     AboutMe,
     Background,
+    MyStack,
   },
 };
 
@@ -33,6 +35,7 @@ setTimeout(updateText, 1700);
     </div>
   </div>
   <AboutMe />
+  <MyStack />
 </template>
 
 <style>
