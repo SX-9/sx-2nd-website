@@ -1,14 +1,26 @@
+<script>
+export default {
+  data() {
+    return {
+      screenWidth: window.innerWidth,
+      description: 'Hi, Im A Web Developer 🌐 From Indonesia 🇮🇩. My Name Is Satria, && Ive Been A Programmer 💻 Since 2021 ➡️ && When I 1st Started My Journey ⛰️ I Originally Wanted To Be A Developer Because I Wanna Make My Own Discord Bots 🤖. Now Since Discord API Updated ⬆️ A Lot Its Really Hard 😡 For Me To Learn 📚 The New Features ⚙️, So I Changed ⬅️ My Journey To Web Development. I Originally Started With Plain HTML, CSS, && JavaScript. Now Im An Intermidiet 😎 Web Developer.',
+    }
+  }
+}
+</script>
+
 <template>
   <div class="center">
     <div id="about" class="container">
       <h1>About Me</h1>
-      <p>
-        Hi, Im A Web Developer From Indonesia. My Name Is Satria, And Ive Been A Programmer Since 2021 And When I 1st Started My Journey I Originally Wanted To Be A Developer Because I Wanna Make My Own Discord Bots. Now Since Discord API Updated A Lot Its Really Hard For Me To Learn The New Features, So I Changed My Journey To Web Development. I Originally Started With Plain HTML, CSS, And JavaScript. Now Im An Intermidiet Web Developer.
-      </p>
+      <p class="desktop" v-if="screenWidth > 600">{{ description }}</p>
+      <p v-else>{{ description }}</p>
     </div>
   </div>
 </template>
 
 <style scoped>
 h1 { text-align: center; }
+p { text-indent: 0; }
+p.desktop { font-size: 1.3rem; text-indent: 2em; }
 </style>

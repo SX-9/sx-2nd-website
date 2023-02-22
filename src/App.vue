@@ -1,18 +1,20 @@
 <script>
-import AboutMe from './components/AboutMe.vue';
-import TopBar from './components/TopBar.vue';
+import AboutMe from "./components/AboutMe.vue";
+import TopBar from "./components/TopBar.vue";
+import Background from "./components/Background.vue";
 export default {
   components: {
     TopBar,
     AboutMe,
-  }
-}
+    Background,
+  },
+};
 
 let text = "Programming Is Painful And Fun";
 let delay = 150;
 let i = 1;
 const updateText = () => {
-  document.getElementById('typing').innerText = text.substring(0, i);
+  document.getElementById("typing").innerText = text.substring(0, i);
   i++;
   if (i <= text.length) {
     setTimeout(updateText, delay);
@@ -22,29 +24,45 @@ setTimeout(updateText, 1700);
 </script>
 
 <template>
-  <TopBar name="SX-9"/>
+  <Background />
+  <TopBar name="SX-9" />
   <div class="center">
     <div class="container">
       <h1><span id="typing"></span><span class="blink">|</span></h1>
-      <p style="text-align: center;">Scroll Down 👇</p>
+      <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
     </div>
   </div>
-  <AboutMe/>
+  <AboutMe />
 </template>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Encode+Sans:wght@400&display=swap');
-
 * {
-  font-family: 'Encode Sans', sans-serif;
+  font-family: "Encode Sans", sans-serif;
   color: #6bb0c6;
   scroll-behavior: smooth;
 }
-body { background: #022530; }
-h1, h2, h3, h4, h5, h6, p { margin: 0; }
-h1 { font-size: 2.5rem; text-align: center; }
+body {
+  background-color: #022530;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+}
+a { text-decoration: none; }
+a:hover { color: white; }
 
-.blink { animation: blink 750ms infinite; }
+.blink {
+  animation: blink 750ms infinite;
+}
 
 img {
   border-top-right-radius: 1em;

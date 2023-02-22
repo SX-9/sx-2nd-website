@@ -21,6 +21,7 @@ export default {
     <a href="#about">👋 About Me</a>
     <a href="#stack">📚 My Stack</a>
     <a href="#work">🖌️ Side Projects</a>
+    <a href="#socials">📧 Contacts</a>
   </p>
   <p class="top center" v-else>
     <a>Hello World</a>
@@ -43,12 +44,12 @@ export default {
 .top.left { left: 1em; }
 
 .top.center {
-  top: 1.7em;
+  top: 2em;
   left: 7em;
   right: 7em;
   text-align: center;
 }
-.top.center a { padding: 1em; text-decoration: none; }
+.top.center a { padding: 1em; }
 
 img { height: 3em; }
 </style>
