@@ -17,6 +17,9 @@ const updateText = () => {
 };
 setTimeout(updateText, 1700);
 
+document.querySelector('title').innerText = "SX's Website";
+document.querySelector('link[rel="icon"]').href = "assets/favicon.svg";
+
 export default {
   name: 'SX\'s Website',
   metaInfo: {
