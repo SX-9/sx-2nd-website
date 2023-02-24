@@ -3,12 +3,14 @@ import AboutMe from "./components/AboutMe.vue";
 import TopBar from "./components/TopBar.vue";
 import Background from "./components/Background.vue";
 import MyStack from './components/MyStack.vue';
+import SideProjects from './components/SideProjects.vue';
 export default {
   components: {
     TopBar,
     AboutMe,
     Background,
     MyStack,
+    SideProjects,
   },
 };
 
@@ -30,12 +32,13 @@ setTimeout(updateText, 1700);
   <TopBar name="SX-9" />
   <div class="center">
     <div class="container">
-      <h1><span id="typing"></span><span class="blink">|</span></h1>
+      <h1 id="page-title"><span id="typing"></span><span class="blink">|</span></h1>
       <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
     </div>
   </div>
   <AboutMe />
   <MyStack />
+  <SideProjects />
 </template>
 
 <style>
@@ -47,7 +50,6 @@ setTimeout(updateText, 1700);
 body {
   background-color: #022530;
 }
-h1,
 h2,
 h3,
 h4,
@@ -58,8 +60,8 @@ p {
 }
 h1 {
   font-size: 2.5rem;
-  text-align: center;
 }
+h1#page-title { text-align: center; }
 a { text-decoration: none; }
 a:hover { color: white; }
 

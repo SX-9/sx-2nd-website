@@ -3,34 +3,35 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
+      texts: [ '🤔 Newbie', '😌 Intermediate', '😎 Pro', '🤑 Expert' ],
       techs: [
         {
-          tech: 'Vue.js',
-          ex: 'Newbie',
+          tech: '⚙️ Node.js',
+          ex: 3,
         },
         {
-          tech: 'Vite',
-          ex: 'Newbie',
+          tech: '🚆 Railway',
+          ex: 2,
         },
         {
-          tech: 'Firebase',
-          ex: 'Intermidiet',
+          tech: '⏩ Express.js',
+          ex: 2,
         },
         {
-          tech: 'Railway',
-          ex: 'Pro',
+          tech: '🐧 Linux',
+          ex: 2,
         },
         {
-          tech: 'Express.js',
-          ex: 'Pro',
+          tech: '🔥 Firebase',
+          ex: 1,
         },
         {
-          tech: 'Node.js',
-          ex: 'Pro',
+          tech: '🌐 Vue.js',
+          ex: 0,
         },
         {
-          tech: 'Linux',
-          ex: 'Pro',
+          tech: '🏃 Vite',
+          ex: 0,
         },
       ],
     }
@@ -42,24 +43,42 @@ export default {
   <div id="stack" class="center">
     <div class="container">
       <h1>My Stack</h1>
-      <ul class="desktop" v-if="screenWidth > 600">
-        <li v-for="(obj) in techs">
-          {{ obj.tech }} - {{ obj.ex }} Level
-        </li>
-      </ul>
-      <ul v-else>
-        <li v-for="(obj) in techs">
-          {{ obj.tech }} - {{ obj.ex }} Level
-        </li>
-      </ul>
+      <table class="desktop round" v-if="screenWidth > 600">
+        <tr>
+          <th class="nopadding round">N</th>
+          <th class="nopadding round">Tech</th>
+          <th class="nopadding round">Experience</th>
+        </tr>
+        <tr v-for="(obj, index) in techs">
+          <td class="nopadding round n">{{ index + 1 }}</td>
+          <td class="round">{{ obj.tech }}</td>
+          <td class="round">{{ texts[obj.ex] }}</td>
+        </tr>
+      </table>
+      <table v-else class="round">
+        <tr>
+          <th class="nopadding round">N</th>
+          <th class="nopadding round">Tech</th>
+          <th class="nopadding round">Experience</th>
+        </tr>
+        <tr v-for="(obj, index) in techs">
+          <td class="nopadding round n">{{ index + 1 }}</td>
+          <td class="round">{{ obj.tech }}</td>
+          <td class="round">{{ texts[obj.ex] }}</td>
+        </tr>
+      </table>
     </div>
   </div>
 </template>
 
 <style scoped>
-h1 { text-align: center; }
-
-ul { list-style: none; }
-li:before { content: '👉 '; }
-ul.desktop li { font-size: 1.3rem; }
+table, th, td {
+  border: .1em solid #6bb0c6;
+}
+table:not(.desktop) { font-size: 0.8em; }
+table:not(.desktop) td { padding-right: 1em; }
+th, td { padding: .5em; }
+th:not(.nopadding), td:not(.nopadding) { padding-right: 5em; }
+td.n { text-align: center; }
+.desktop td { font-size: 1.3rem; }
 </style>

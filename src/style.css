@@ -11,3 +11,10 @@ div.center {
 div.center div.container {
   margin: 3em;
 }
+
+.round {
+  border-top-right-radius: 1em;
+  border-bottom-right-radius: 1em;
+  border-top-left-radius: 1em;
+  border-bottom-left-radius: 1em;
+}
