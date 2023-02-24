@@ -1,5 +1,7 @@
-import { createApp } from 'vue'
-import './style.css'
-import App from './App.vue'
+import { createApp } from 'vue';
+import Meta from 'vue-3-meta';
+import App from './App.vue';
+import './style.css';
 
-createApp(App).mount('#app')
+const app = createApp(App).mount('#app');
+app.use(Meta);

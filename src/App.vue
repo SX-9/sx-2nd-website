@@ -4,15 +4,6 @@ import TopBar from "./components/TopBar.vue";
 import Background from "./components/Background.vue";
 import MyStack from './components/MyStack.vue';
 import SideProjects from './components/SideProjects.vue';
-export default {
-  components: {
-    TopBar,
-    AboutMe,
-    Background,
-    MyStack,
-    SideProjects,
-  },
-};
 
 let text = "Programming Is Painful And Fun";
 let delay = 150;
@@ -25,6 +16,28 @@ const updateText = () => {
   }
 };
 setTimeout(updateText, 1700);
+
+export default {
+  name: 'SX\'s Website',
+  metaInfo: {
+    title: 'SX\'s Website',
+    htmlAttrs: {
+      lang: 'en-US'
+    },
+    meta: [
+      { charset: 'utf-8' },
+      { name: 'description', content: 'Programming Is Painful And Fun!' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+    ]
+  },
+  components: {
+    TopBar,
+    AboutMe,
+    Background,
+    MyStack,
+    SideProjects,
+  },
+}
 </script>
 
 <template>
