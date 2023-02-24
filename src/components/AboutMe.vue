@@ -3,7 +3,7 @@ export default {
   data() {
     return {
       screenWidth: window.innerWidth,
-      description: 'Hi, Im A Web Developer 🌐 From Indonesia 🇮🇩. My Name Is Satria, && Ive Been A Programmer 💻 Since 2021 ➡️, When I 1st Started My Journey ⛰️ I Wanted To Do Python 🐍 Scripting 📰 So I Followed This Tutorial 👨‍🏫 Series From Youtube 📹 But It Was Taking Forever 🔴 For The Youtuber To Finnish ✅ The Series, So I Quit 🙅‍♂️ Whitout Trying Other Videos. After A Made My Discord Server 🖥️, I Wanted To Be A Developer Because I Wanna Make My Own Discord Bots 🤖. Now Since Discord API Updated ⬆️ A Lot Its Really Hard 😡 For Me To Learn 📚 The New Features ⚙️, So I Changed ⬅️ My Journey To Web Development. I Originally Started With Plain HTML, CSS, && JavaScript. Now Im An Intermidiet 😎 Web Developer.',
+      description: 'I'm Satria, a web developer from Indonesia. I started programming in 2021 and initially wanted to learn Python scripting through a tutorial series on YouTube. However, I quit because the series was taking too long to finish. Later, I made my own Discord server and became interested in making Discord bots. Since Discord API updates frequently, it became challenging to learn the new features, so I switched to web development. I started with HTML, CSS, and JavaScript, and now I consider myself an intermediate web developer.',
     }
   }
 }
