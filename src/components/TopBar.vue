@@ -5,6 +5,10 @@ defineProps({
 </script>
 
 <script>
+fetch('https://api.lanyard.rest/v1/users/882595027132493864')
+  .then(r => r.json())
+  .then(d => document.querySelector('img#pfp').classList.add(d.data.discord_status));
+
 export default {
   data() {
     return {
@@ -25,7 +29,7 @@ export default {
 </script>
 
 <template>
-  <img class="top left bg" src="../assets/avatar.png" alt="Pfp" />
+  <img class="top left bg" id="pfp" src="../assets/avatar.png" alt="Pfp" />
   <p class="top center bg" v-if="screenWidth > 600">
     <a href="#about">👋 About Me</a>
     <a href="#stack">📚 My Stack</a>
@@ -54,6 +58,7 @@ export default {
 .top {
   position: fixed;
   padding: 0.5em;
+  animation: fadeIn 2s ease-in-out;
 }
 h2.top.right {
   top: 1em;
@@ -68,7 +73,7 @@ ul.top.right {
 }
 .top.left {
   top: 1em;
-  left: 1em;
+  left: 1.5em;
 }
 
 .bg {
@@ -89,13 +94,37 @@ li { margin-bottom: 1em; padding: .5em; }
   left: 7em;
   right: 7em;
   text-align: center;
+  animation: goWide 2s ease-in-out;
 }
 a {
   text-decoration: none;
   padding: 1em;
 }
 
+.online { --color: lime; }
+.dnd { --color: red; }
+.idle { --color: yellow; }
+.offline { --color: grey; }
 img {
-  height: 3em;
+  padding: 0;
+  height: 3.2em;
+  border: .1em solid var(--color);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes goWide {
+  from {
+    top: 0;
+  }
+  to {
+    top: 2em;
+  }
 }
 </style>

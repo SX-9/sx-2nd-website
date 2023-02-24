@@ -1,9 +1,18 @@
 <script>
+import "https://www.googletagmanager.com/gtag/js?id=G-73LS2TE653";
 import AboutMe from "./components/AboutMe.vue";
 import TopBar from "./components/TopBar.vue";
 import Background from "./components/Background.vue";
-import MyStack from './components/MyStack.vue';
-import SideProjects from './components/SideProjects.vue';
+import MyStack from "./components/MyStack.vue";
+import SideProjects from "./components/SideProjects.vue";
+
+window.dataLayer = window.dataLayer || [];
+function gtag() {
+  dataLayer.push(arguments);
+}
+gtag("js", new Date());
+
+gtag("config", "G-73LS2TE653");
 
 let text = "Programming Is Painful And Fun";
 let delay = 150;
@@ -17,21 +26,21 @@ const updateText = () => {
 };
 setTimeout(updateText, 1700);
 
-document.querySelector('title').innerText = "SX's Website";
+document.querySelector("title").innerText = "SX's Website";
 document.querySelector('link[rel="icon"]').href = "assets/favicon.svg";
 
 export default {
-  name: 'SX\'s Website',
+  name: "SX's Website",
   metaInfo: {
-    title: 'SX\'s Website',
+    title: "SX's Website",
     htmlAttrs: {
-      lang: 'en-US'
+      lang: "en-US",
     },
     meta: [
-      { charset: 'utf-8' },
-      { name: 'description', content: 'Programming Is Painful And Fun!' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-    ]
+      { charset: "utf-8" },
+      { name: "description", content: "Programming Is Painful And Fun!" },
+      { name: "viewport", content: "width=device-width, initial-scale=1" },
+    ],
   },
   components: {
     TopBar,
@@ -40,7 +49,7 @@ export default {
     MyStack,
     SideProjects,
   },
-}
+};
 </script>
 
 <template>
@@ -48,7 +57,9 @@ export default {
   <TopBar name="SX-9" />
   <div class="center">
     <div class="container">
-      <h1 id="page-title"><span id="typing"></span><span class="blink">|</span></h1>
+      <h1 id="page-title">
+        <span id="typing"></span><span class="blink">|</span>
+      </h1>
       <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
     </div>
   </div>
@@ -77,8 +88,12 @@ p {
 h1 {
   font-size: 2.5rem;
 }
-h1#page-title { text-align: center; }
-a:hover { color: white; }
+h1#page-title {
+  text-align: center;
+}
+a:hover {
+  color: white;
+}
 
 .blink {
   animation: blink 750ms infinite;
