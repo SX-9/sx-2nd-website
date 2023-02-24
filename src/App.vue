@@ -62,7 +62,6 @@ h1 {
   font-size: 2.5rem;
 }
 h1#page-title { text-align: center; }
-a { text-decoration: none; }
 a:hover { color: white; }
 
 .blink {

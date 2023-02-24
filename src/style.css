@@ -17,4 +17,6 @@ div.center div.container {
   border-bottom-right-radius: 1em;
   border-top-left-radius: 1em;
   border-bottom-left-radius: 1em;
+  border: .1em solid #6bb0c6;
+  padding: 1em;
 }

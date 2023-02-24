@@ -45,26 +45,26 @@ export default {
       <h1>My Stack</h1>
       <table class="desktop round" v-if="screenWidth > 600">
         <tr>
-          <th class="nopadding round">N</th>
-          <th class="nopadding round">Tech</th>
-          <th class="nopadding round">Experience</th>
+          <th class="nopadding">N</th>
+          <th class="nopadding">Tech</th>
+          <th class="nopadding">Experience</th>
         </tr>
         <tr v-for="(obj, index) in techs">
-          <td class="nopadding round n">{{ index + 1 }}</td>
-          <td class="round">{{ obj.tech }}</td>
-          <td class="round">{{ texts[obj.ex] }}</td>
+          <td class="nopadding n">{{ index + 1 }}</td>
+          <td>{{ obj.tech }}</td>
+          <td>{{ texts[obj.ex] }}</td>
         </tr>
       </table>
       <table v-else class="round">
         <tr>
-          <th class="nopadding round">N</th>
-          <th class="nopadding round">Tech</th>
-          <th class="nopadding round">Experience</th>
+          <th class="nopadding">N</th>
+          <th class="nopadding">Tech</th>
+          <th class="nopadding">Experience</th>
         </tr>
         <tr v-for="(obj, index) in techs">
-          <td class="nopadding round n">{{ index + 1 }}</td>
-          <td class="round">{{ obj.tech }}</td>
-          <td class="round">{{ texts[obj.ex] }}</td>
+          <td class="nopadding n">{{ index + 1 }}</td>
+          <td>{{ obj.tech }}</td>
+          <td>{{ texts[obj.ex] }}</td>
         </tr>
       </table>
     </div>
@@ -75,10 +75,10 @@ export default {
 table, th, td {
   border: .1em solid #6bb0c6;
 }
+td.n { text-align: center; }
 table:not(.desktop) { font-size: 0.8em; }
 table:not(.desktop) td { padding-right: 1em; }
 th, td { padding: .5em; }
 th:not(.nopadding), td:not(.nopadding) { padding-right: 5em; }
-td.n { text-align: center; }
 .desktop td { font-size: 1.3rem; }
 </style>
