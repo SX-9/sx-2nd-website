@@ -1,4 +1,5 @@
 <script setup>
+import { ref } from 'vue';
 defineProps({
   name: String,
 });
@@ -12,7 +13,7 @@ fetch('https://api.lanyard.rest/v1/users/882595027132493864')
 export default {
   data() {
     return {
-      screenWidth: window.innerWidth,
+      screenWidth: ref(window.innerWidth),
     };
   },
   methods: {
@@ -46,7 +47,7 @@ export default {
   >
     {{ name }}
   </h2>
-  <ul class="top right" id="socials">
+  <ul class="top right noanim" id="socials">
     <li class="bg"><a href="https://github.com/SX-9">Github</a></li>
     <li class="bg"><a href="https://discord.st/sx-aircraft">Discord</a></li>
     <li class="bg"><a href="https://twitter.com/SX_Discord">Twitter</a></li>
@@ -58,8 +59,8 @@ export default {
 .top {
   position: fixed;
   padding: 0.5em;
-  animation: fadeIn 2s ease-in-out;
 }
+.top:not(.noanim) { animation: fadeIn 2s ease-in-out; }
 h2.top.right {
   top: 1em;
   cursor: pointer;

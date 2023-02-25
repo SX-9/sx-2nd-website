@@ -1,8 +1,9 @@
 <script>
+import { ref } from 'vue';
 export default {
   data() {
     return {
-      screenWidth: window.innerWidth,
+      screenWidth: ref(window.innerWidth),
       texts: [ '🤔 Newbie', '😌 Intermediate', '😎 Pro', '🤑 Expert' ],
       techs: [
         {
