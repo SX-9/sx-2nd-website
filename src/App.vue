@@ -1,10 +1,12 @@
-<script>
+<script setup>
 import "https://www.googletagmanager.com/gtag/js?id=G-73LS2TE653";
 import AboutMe from "./components/AboutMe.vue";
 import TopBar from "./components/TopBar.vue";
 import Background from "./components/Background.vue";
-import MyStack from "./components/MyStack.vue";
 import SideProjects from "./components/SideProjects.vue";
+</script>
+
+<script>
 
 window.dataLayer = window.dataLayer || [];
 function gtag() {
@@ -25,55 +27,25 @@ const updateText = () => {
   }
 };
 setTimeout(updateText, 1700);
-
-document.querySelector("title").innerText = "SX's Website";
-document.querySelector('link[rel="icon"]').href = "assets/favicon.svg";
-
-export default {
-  name: "SX's Website",
-  metaInfo: {
-    title: "SX's Website",
-    htmlAttrs: {
-      lang: "en-US",
-    },
-    meta: [
-      { charset: "utf-8" },
-      { name: "description", content: "Programming Is Painful And Fun!" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-    ],
-  },
-  components: {
-    TopBar,
-    AboutMe,
-    Background,
-    MyStack,
-    SideProjects,
-  },
-};
 </script>
 
 <template>
   <Background />
   <TopBar name="SX-9" />
-  <div class="center">
+  <div class="center" id="home">
     <div class="container">
       <h1 id="page-title">
         <span id="typing"></span><span class="blink">|</span>
       </h1>
       <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
+      <p class="footer">&#169; {{ new Date().getFullYear() }} SX Spy Agent - All Rights Reserved.</p>
     </div>
   </div>
   <AboutMe />
-  <MyStack />
   <SideProjects />
 </template>
 
 <style>
-* {
-  font-family: "Encode Sans", sans-serif;
-  color: #6bb0c6;
-  scroll-behavior: smooth;
-}
 body {
   background-color: #022530;
 }
@@ -97,6 +69,14 @@ a:hover {
 
 .blink {
   animation: blink 750ms infinite;
+}
+
+.footer {
+  position: fixed;
+  bottom: 1em;
+  left: 0;
+  width: 100%;
+  text-align: center;
 }
 
 img {

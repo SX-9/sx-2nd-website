@@ -32,8 +32,8 @@ export default {
 <template>
   <img class="top left bg" id="pfp" src="../assets/avatar.png" alt="Pfp" />
   <p class="top center bg" v-if="screenWidth > 600">
+    <a href="#home">🏡 Home</a>
     <a href="#about">👋 About Me</a>
-    <a href="#stack">📚 My Stack</a>
     <a href="#work">🖌️ Side Projects</a>
   </p>
   <p class="top center bg" v-else>

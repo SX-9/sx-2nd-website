@@ -54,7 +54,7 @@ getGitHubRepositories('SX-9', 8).then(
     <div class="container">
       <h1>Side Projects</h1>
       <div id="grid"></div>
-      <p id="more"><a href="https://github.com/SX-9?tab=repositories">See More On My Github</a></p>
+      <p id="more"><a href="https://github.com/SX-9?tab=repositories">See More On My Github</a><br><br><br></p>
     </div>
   </div>
 </template>
@@ -65,7 +65,7 @@ div#grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(15em, 1fr));
   grid-gap: 1em;
-  width: 80vw;
+  width: 70vw;
 }
 
 p.desktop { font-size: 1.3rem; text-indent: 2em; }
