@@ -16,7 +16,7 @@ gtag("js", new Date());
 
 gtag("config", "G-73LS2TE653");
 
-let text = "Programming Is Painful And Fun";
+let text = "hi, i make random stuff 4 fun!";
 let delay = 150;
 let i = 1;
 const updateText = () => {
