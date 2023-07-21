@@ -37,7 +37,7 @@ export default {
     <a href="#work">🖌️ Side Projects</a>
   </p>
   <p class="top center bg" v-else>
-    <a>Hello World</a>
+    <a href="https://sx9.is-a.dev">Terminal Mode</a>
   </p>
   <h2
     class="top right bg"
