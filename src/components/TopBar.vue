@@ -35,9 +35,10 @@ export default {
     <a href="#home">🏡 Home</a>
     <a href="#about">👋 About Me</a>
     <a href="#work">🖌️ Side Projects</a>
+    <a href="https://sx9.is-a.dev">⌨️ TTY</a>
   </p>
   <p class="top center bg" v-else>
-    <a href="https://sx9.is-a.dev">Terminal Mode</a>
+    <a href="https://sx9.is-a.dev">⌨️ TTY</a>
   </p>
   <h2
     class="top right bg"
