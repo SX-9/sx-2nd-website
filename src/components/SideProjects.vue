@@ -24,7 +24,7 @@ async function getGitHubRepositories(username, limit) {
   }
 }
 
-getGitHubRepositories('SX-9', 8).then(
+getGitHubRepositories('SX-9', 9).then(
   repos => repos.forEach(repo => {
     let el = document.createElement('div');
     let title = document.createElement('h2');
@@ -52,7 +52,7 @@ getGitHubRepositories('SX-9', 8).then(
 <template>
   <div id="work" class="center">
     <div class="container">
-      <h1>Side Projects</h1>
+      <h1>Github Repositories</h1>
       <div id="grid"></div>
       <p id="more"><a href="https://github.com/SX-9?tab=repositories">See More On My Github</a><br><br><br></p>
     </div>

@@ -1,5 +1,4 @@
 <script setup>
-import { ref } from 'vue';
 defineProps({
   name: String,
 });
@@ -13,13 +12,19 @@ fetch('https://api.lanyard.rest/v1/users/882595027132493864')
 export default {
   data() {
     return {
-      screenWidth: ref(window.innerWidth),
+      screenWidth: window.innerWidth,
     };
+  },
+  mounted() {
+    setInterval(() => {
+      this.screenWidth = window.innerWidth;
+    }, 1000);
   },
   methods: {
     showOrHide() {
       let el = document.getElementById("socials");
-      if (el.style.display === "none") {
+      let style = el.style.display
+      if (style === "none" || !style) {
         el.style.display = "block";
       } else {
         el.style.display = "none";
@@ -31,14 +36,14 @@ export default {
 
 <template>
   <img class="top left bg" id="pfp" src="../assets/avatar.png" alt="Pfp" />
-  <p class="top center bg" v-if="screenWidth > 600">
+  <p class="top center bg" v-if="screenWidth > 711">
     <a href="#home">🏡 Home</a>
     <a href="#about">👋 About Me</a>
     <a href="#work">🖌️ Side Projects</a>
-    <a href="https://sx9.is-a.dev">⌨️ TTY</a>
+    <a href="https://satr14.tech">⌨️ TTY</a>
   </p>
   <p class="top center bg" v-else>
-    <a href="https://sx9.is-a.dev">⌨️ TTY</a>
+    <a href="https://satr14.tech">⌨️ TTY</a>
   </p>
   <h2
     class="top right bg"
@@ -57,6 +62,10 @@ export default {
 </template>
 
 <style scoped>
+img, ul, li, h2, p {
+  overflow: hidden;
+}
+
 .top {
   position: fixed;
   padding: 0.5em;
@@ -79,7 +88,7 @@ ul.top.right {
 }
 
 .bg {
-  background: #0000003d;
+  background: #00000085;
   border-top-right-radius: 1em;
   border-bottom-right-radius: 1em;
   border-top-left-radius: 1em;
@@ -94,7 +103,7 @@ li { margin-bottom: 1em; padding: .5em; }
 .top.center {
   top: 2em;
   left: 7em;
-  right: 7em;
+  right: 8em;
   text-align: center;
   animation: goWide 2s ease-in-out;
 }

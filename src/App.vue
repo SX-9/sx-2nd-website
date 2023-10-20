@@ -31,7 +31,7 @@ setTimeout(updateText, 1700);
 
 <template>
   <Background />
-  <TopBar name="SX-9" />
+  <TopBar name="Satr14" />
   <div class="center" id="home">
     <div class="container">
       <h1 id="page-title">
@@ -47,7 +47,7 @@ setTimeout(updateText, 1700);
 
 <style>
 body {
-  background-color: #022530;
+  background-color: #000913;
 }
 h2,
 h3,

@@ -4,12 +4,13 @@
   font-family: "Encode Sans", sans-serif;
   color: #6bb0c6;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 div.center {
   margin: 0;
   padding: 0;
-  height: 90vh;
+  min-height: 90vh;
   display: grid;
   place-items: center;
   grid-template-columns: 1fr;
