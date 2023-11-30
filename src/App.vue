@@ -38,7 +38,7 @@ setTimeout(updateText, 1700);
         <span id="typing"></span><span class="blink">|</span>
       </h1>
       <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
-      <p class="footer">&#169; {{ new Date().getFullYear() }} SX Spy Agent - All Rights Reserved.</p>
+      <p class="footer">&#169; {{ new Date().getFullYear() }} Satria - All Rights Reserved.</p>
     </div>
   </div>
   <AboutMe />
