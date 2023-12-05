@@ -7,7 +7,7 @@
   overflow-x: hidden;
 }
 
-div.center {
+div.center:not(.no) {
   margin: 0;
   padding: 0;
   min-height: 90vh;

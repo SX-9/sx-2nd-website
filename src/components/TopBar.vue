@@ -32,15 +32,14 @@ export default {
 
 <template>
   <img class="top left bg" id="pfp" src="../assets/avatar.png" alt="Pfp" />
-  <p class="top center bg" v-if="screenWidth > 711">
-    <a href="#home">🏡 Home</a>
-    <a href="#about">👋 About Me</a>
-    <a href="#work">🖌️ Side Projects</a>
-    <a href="https://satr14.tech">⌨️ TTY</a>
-  </p>
-  <p class="top center bg" v-else>
-    <a href="https://satr14.tech">⌨️ TTY</a>
-  </p>
+  <div class="top center no">
+    <ul class="top bg">
+      <li v-if="screenWidth > 800"><a href="#home">🏡 Home</a></li>
+      <li v-if="screenWidth > 800"><a href="#about">👋 About Me</a></li>
+      <li v-if="screenWidth > 800"><a href="#work">🖌️ Side Projects</a></li>
+      <li><a href="https://satr14.tech">⌨️ TTY</a></li>
+    </ul>
+  </div>
   <h2 
     class="top right bg"
     id="menu"
@@ -54,8 +53,7 @@ export default {
   </h2>
   <ul class="top right noanim" id="socials">
     <li class="bg"><a href="https://github.com/SX-9">Github</a></li>
-    <li class="bg"><a href="https://discord.st/sx-aircraft">Discord</a></li>
-    <li class="bg"><a href="https://twitter.com/SX_Discord">Twitter</a></li>
+    <li class="bg"><a href="https://discordapp.com/users/882595027132493864">Discord</a></li>
     <li class="bg"><a href="mailto:hello@mail.sx9.is-a.dev">Email</a></li>
   </ul>
 </template>
@@ -65,11 +63,21 @@ img, ul, li, h2, p {
   overflow: hidden;
 }
 
+li { display: inline; }
+
 .top {
   position: fixed;
   padding: 0.5em;
 }
 .top:not(.noanim) { animation: fadeIn 2s ease-in-out; }
+
+div.top.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1em;
+}
+
 h2.top.right {
   top: 1em;
   cursor: pointer;
@@ -101,7 +109,7 @@ li { margin-bottom: 1em; padding: .5em; }
 
 .top.center {
   top: 2em;
-  left: 7em;
+  left: 8em;
   right: 8em;
   text-align: center;
   animation: goWide 2s ease-in-out;
