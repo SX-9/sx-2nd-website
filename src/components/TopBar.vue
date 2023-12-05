@@ -5,10 +5,6 @@ defineProps({
 </script>
 
 <script>
-fetch('https://api.lanyard.rest/v1/users/882595027132493864')
-  .then(r => r.json())
-  .then(d => document.querySelector('img#pfp').classList.add(d.data.discord_status));
-
 export default {
   data() {
     return {
@@ -45,11 +41,14 @@ export default {
   <p class="top center bg" v-else>
     <a href="https://satr14.tech">⌨️ TTY</a>
   </p>
-  <h2
+  <h2 
     class="top right bg"
     id="menu"
     @click="showOrHide()"
+    @keydown="showOrHide()"
     title="Click For Socials"
+    tabindex="0"
+    role="button"
   >
     {{ name }}
   </h2>
@@ -112,14 +111,9 @@ a {
   padding: 1em;
 }
 
-.online { --color: lime; }
-.dnd { --color: red; }
-.idle { --color: yellow; }
-.offline { --color: grey; }
 img {
   padding: 0;
   height: 3.2em;
-  border: .1em solid var(--color);
 }
 
 @keyframes fadeIn {

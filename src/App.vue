@@ -4,6 +4,7 @@ import AboutMe from "./components/AboutMe.vue";
 import TopBar from "./components/TopBar.vue";
 import Background from "./components/Background.vue";
 import SideProjects from "./components/SideProjects.vue";
+import PalestineBanner from "./components/PalestineBanner.vue";
 </script>
 
 <script>
@@ -19,6 +20,21 @@ gtag("config", "G-73LS2TE653");
 let text = "hi, i make random stuff 4 fun!";
 let delay = 150;
 let i = 1;
+
+fetch('https://api.lanyard.rest/v1/users/882595027132493864')
+  .then(r => r.json())
+  .then(d => {
+    let statusEl = document.getElementById("status");
+    let status = d.data.discord_status;
+    if (status === 'offline') return statusEl.remove();
+
+    let { song, artist } = d.data.spotify || {};
+    let statusText = song ? `listening to ${song} by ${artist}` : `im ${status}`;
+
+    statusEl.innerText = statusText;
+    statusEl.classList.add(status);
+  });
+
 const updateText = () => {
   document.getElementById("typing").innerText = text.substring(0, i);
   i++;
@@ -34,11 +50,12 @@ setTimeout(updateText, 1700);
   <TopBar name="Satr14" />
   <div class="center" id="home">
     <div class="container">
+      <p style="text-align: center" class="blink" id="status"></p>
       <h1 id="page-title">
         <span id="typing"></span><span class="blink">|</span>
       </h1>
       <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
-      <p class="footer">&#169; {{ new Date().getFullYear() }} SX Spy Agent - All Rights Reserved.</p>
+      <PalestineBanner class="footer" />
     </div>
   </div>
   <AboutMe />
@@ -46,6 +63,11 @@ setTimeout(updateText, 1700);
 </template>
 
 <style>
+
+.online { color: rgb(95, 255, 95); }
+.dnd { color: rgb(255, 93, 93); }
+.idle { color: rgb(255, 255, 99); }
+
 body {
   background-color: #000913;
 }
@@ -65,6 +87,7 @@ h1#page-title {
 }
 a:hover {
   color: white;
+  cursor: pointer;
 }
 
 .blink {
