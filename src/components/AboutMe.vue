@@ -17,7 +17,7 @@ export default {
       <p class="desktop" v-if="screenWidth > 600">{{ description }}</p>
       <p v-else>{{ description }}</p>
       <img v-if="screenWidth > 600" alt="Skills" src="https://skillicons.dev/icons?i=vite,vue,firebase,linux,nodejs,vscode&perline=6&theme=dark">
-      <img v-else class="big" alt="Skills" src="https://skillicons.dev/icons?i=vite,vue,firebase,linux,nodejs,vscode&perline=6&theme=dark">
+      <img v-else alt="Skills" src="https://skillicons.dev/icons?i=vite,vue,firebase,linux,nodejs,vscode&perline=6&theme=dark">
     </div>
   </div>
 </template>
@@ -25,5 +25,4 @@ export default {
 <style scoped>
 p { text-indent: 1.5em; margin: 1em; }
 p.desktop { font-size: 1.3rem; }
-img.big { width: 100%; }
 </style>
