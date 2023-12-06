@@ -29,7 +29,7 @@ fetch('https://api.lanyard.rest/v1/users/882595027132493864')
     if (status === 'offline') return statusEl.remove();
 
     let { song, artist } = d.data.spotify || {};
-    let statusText = song ? `listening to ${song} by ${artist}` : `im ${status}`;
+    let statusText = song ? `listening to ${song} by ${artist}` : status;
 
     statusEl.innerText = statusText;
     statusEl.classList.add(status);
@@ -54,7 +54,7 @@ setTimeout(updateText, 1700);
       <h1 id="page-title">
         <span id="typing"></span><span class="blink">|</span>
       </h1>
-      <p style="text-align: center"><a href="#about">Scroll Down 👇</a></p>
+      <p style="text-align: center"><a href="#about">Scroll Down</a></p>
       <PalestineBanner class="footer" />
     </div>
   </div>

@@ -34,10 +34,10 @@ export default {
   <img class="top left bg" id="pfp" src="../assets/avatar.png" alt="Pfp" />
   <div class="top center no">
     <ul class="top bg">
-      <li v-if="screenWidth > 800"><a href="#home">🏡 Home</a></li>
-      <li v-if="screenWidth > 800"><a href="#about">👋 About Me</a></li>
-      <li v-if="screenWidth > 800"><a href="#work">🖌️ Side Projects</a></li>
-      <li><a href="https://satr14.tech">⌨️ TTY</a></li>
+      <li v-if="screenWidth > 800"><a href="#home">Home</a></li>
+      <li v-if="screenWidth > 800"><a href="#about">About Me</a></li>
+      <li v-if="screenWidth > 800"><a href="#work">Side Projects</a></li>
+      <li><a href="https://satr14.tech">TTY</a></li>
     </ul>
   </div>
   <h2 

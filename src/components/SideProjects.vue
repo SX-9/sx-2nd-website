@@ -36,7 +36,7 @@ getGitHubRepositories('SX-9', 9).then(
     link.href = repo.link;
     link.innerText = repo.name;
     description.innerText = `${repo.description || 'No Description'}`;
-    stars.innerText = `Stars: ${repo.stars || 'No? 😢'}`;
+    stars.innerText = `Stars: ${repo.stars || 'zero??'}`;
     el.classList.add('round');
     
     title.appendChild(link);

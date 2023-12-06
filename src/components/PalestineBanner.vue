@@ -3,7 +3,7 @@
         <h1>🇵🇸 Support Palestine 🇵🇸</h1>
         <p>Stand in solidarity with the people of Palestine.</p>
         <button @click="donate">Donate Now</button>
-        <a @click="close">Close</a>
+        <a @click="close" @keydown="close" role="button" tabindex="0">Close</a>
     </div>
 </template>
 
